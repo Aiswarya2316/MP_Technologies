@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP Technologies - Python Full Stack</title>
+    <style>
+        /* Navbar Styles */
+        .navbar {
+            background-color: #6a0dad;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 8px 12px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            background-color: white;
+            color: #6a0dad;
+            min-width: 150px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            z-index: 1000;
+        }
+
+        .dropdown-menu li a {
+            color: #6a0dad;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: #f3f0f8;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f0f8;
+            color: #2d2d2d;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #6a0dad;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(104, 81, 173, 0.2);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        /* Pricing Table */
+        .pricing {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .price-card {
+            background-color: #fff;
+            border: 2px solid #6a0dad;
+            border-radius: 12px;
+            width: 250px;
+            margin: 10px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(106, 13, 173, 0.1);
+        }
+
+        .price-card h3 {
+            color: #6a0dad;
+            margin-bottom: 15px;
+        }
+
+        .price-card p {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #6a0dad;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .dropdown-menu {
+                position: relative;
+            }
+
+            .pricing {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MP Technologies</div>
+        <ul class="nav-links">
+            <li><a href="../">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Courses</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../python">Python</a></li>
+                    <li><a href="../java">Java</a></li>
+                    <li><a href="../c">C</a></li>
+                    <li><a href="../cpp">C++</a></li>
+                    <li><a href="../react">React</a></li>
+                    <li><a href="../maths">Maths</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Programs</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">2-Month</a></li>
+                    <li><a href="#">3-Month</a></li>
+                    <li><a href="#">6-Month</a></li>
+                </ul>
+            </li>
+            <li><a href="../contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Maths</h1>
+        <p>
+            Mathematics is fundamental to the world of computing and programming. In our Maths course, you’ll cover core mathematical 
+            concepts that are crucial for problem-solving and algorithm development. The topics include algebra, calculus, discrete 
+            mathematics, probability, and statistics. These concepts are directly applied in computer science, data science, machine 
+            learning, and more. With a strong mathematical foundation, you’ll be better equipped to handle complex programming challenges.
+        </p>
+
+        <div class="gallery">
+            <img src="https://via.placeholder.com/300x200?text=Maths+Concepts" alt="Maths">
+            <img src="https://via.placeholder.com/300x200?text=Algorithm+Design" alt="Algorithms">
+            <img src="../static/depositphotos_10910049-stock-illustration-mathematics-school-supplies-geometric-shapes.jpg" alt="Problem Solving">
+        </div>
+
+        <h2 style="margin-top: 40px;">Fee Packages</h2>
+        <div class="pricing">
+            <div class="price-card">
+                <h3>2-Month Program</h3>
+                <p><strong>₹ 8,000</strong></p>
+                <p>Introduction to Maths & Algorithm Design</p>
+                <p>Mini Project + Certificate</p>
+            </div>
+            <div class="price-card">
+                <h3>3-Month Program</h3>
+                <p><strong>₹ 12,000</strong></p>
+                <p>Advanced Topics in Maths & Problem Solving</p>
+                <p>Project + Certificate</p>
+            </div>
+            <div class="price-card">
+                <h3>6-Month Program</h3>
+                <p><strong>₹ 20,000</strong></p>
+                <p>Comprehensive Maths for Developers</p>
+                <p>Live Projects + Certificates</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 MP Technologies. All rights reserved.
+    </footer>
+</body>
+</html>

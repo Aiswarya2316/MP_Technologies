@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP Technologies</title>
+    <style>
+        /* Navbar Styles */
+.navbar {
+    background-color: #6a0dad;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: white;
+    color: #6a0dad;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    z-index: 1000;
+}
+
+.dropdown-menu li a {
+    color: #6a0dad;
+    padding: 10px 15px;
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f3f0f8;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: relative;
+    }
+}
+
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f0f8;
+            color: #2d2d2d;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(104, 81, 173, 0.2);
+            padding: 30px;
+            border-left: 6px solid #6a0dad;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #6a0dad;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        strong {
+            color: #6a0dad;
+        }
+
+        ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: auto;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(106, 13, 173, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(106, 13, 173, 0.2);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        
+        .card-content h3 {
+            font-size: 1.2em;
+            margin-bottom: 12px;
+            color: #6a0dad;
+        }
+        
+        .card-content p {
+            font-size: 0.95em;
+            color: #444;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #6a0dad;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                justify-content: center;
+            }
+
+            .card {
+                flex: 1 1 45%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MP Technologies</div>
+        <ul class="nav-links">
+            <li><a href="../">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Courses</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../python">Python</a></li>
+                    <li><a href="../java">Java</a></li>
+                    <li><a href="../c">C</a></li>
+                    <li><a href="../cpp">C++</a></li>
+                    <li><a href="../react">React</a></li>
+                    <li><a href="../maths">Maths</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Programs</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">2-Month</a></li>
+                    <li><a href="#">3-Month</a></li>
+                    <li><a href="#">6-Month</a></li>
+                </ul>
+            </li>
+            <li><a href="../contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>MP Technologies</h1>
+        <p>
+            We provide <strong>clear and structured training</strong> for students. Our offered courses include 
+            <strong>Python, Java, C, C++, and React</strong>.<br><br>
+            We also offer flexible <strong>online classes</strong> for:
+            <ul>
+                <li>2-month course</li>
+                <li>3-month course</li>
+                <li>6-month course</li>
+            </ul>
+        </p>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="../static/images.jpg" alt="Python">
+            <div class="card-content">
+                <h3>Python</h3>
+                <p>Learn the most versatile and beginner-friendly programming language.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../static/images (3).jpg" alt="Java">
+            <div class="card-content">
+                <h3>Java</h3>
+                <p>Master object-oriented programming and build powerful applications.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../static/download (1).jpg" alt="C Language">
+            <div class="card-content">
+                <h3>C Language</h3>
+                <p>Understand programming fundamentals and system-level development.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../static/download (2).jpg" alt="C++">
+            <div class="card-content">
+                <h3>C++</h3>
+                <p>Dive deeper into OOPs concepts and data structures with C++.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../static/images (6).jpg" alt="React">
+            <div class="card-content">
+                <h3>React</h3>
+                <p>Build dynamic and modern user interfaces using React.js.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../static/download (3).jpg" alt="Maths">
+            <div class="card-content">
+                <h3>Maths</h3>
+                <p>Strengthen your problem-solving skills and logical thinking with core mathematical concepts essential for programming and development.</p>
+            </div>
+        </div>        
+    </div>
+
+    <footer>
+        &copy; 2025 MP Technologies. All rights reserved.
+    </footer>
+
+</body>
+</html>
